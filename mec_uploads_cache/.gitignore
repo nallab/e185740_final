@@ -1,0 +1,5 @@
+/data/*
+/gitold/*
+/quiche
+/nginx_logs/*
+!.keep

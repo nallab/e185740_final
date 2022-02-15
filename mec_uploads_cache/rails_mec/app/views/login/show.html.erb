@@ -1,0 +1,12 @@
+<h2>Home</h2>
+<%= link_to "アプリを作成してAppkeyを取得してください", "https://www.dropbox.com/developers/apps"%>
+<%= form_for(@user, url: login_path, method: :patch) do |f| %>
+  <%= f.text_field  :client_id %>
+  <%= f.text_field  :client_secret%>
+  <%= f.submit "appKeyを保存" %>
+<% end %>
+<%= link_to "codeを取得してください", "https://www.dropbox.com/oauth2/authorize/?client_id=#{@user.client_id}&response_type=code&token_access_type=offline"%>
+<%= form_for(@user, url: login_path, method: :patch) do |f| %>
+  <%= f.text_field  :access_token %>
+  <%= f.submit "access_tokenを保存" %>
+<% end %>
