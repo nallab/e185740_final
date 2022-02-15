@@ -76,7 +76,7 @@ https://github.com/andreafabrizi/Dropbox-Uploader を使用してアップロー
 time ./dropbox_uploader.sh upload "./1g_dummy.txt" "/1g_dummy.txt"
 ```
 
-## http1，http2を使用したアップロード
+## http1，http2を使用したMECへのアップロード
 ---
 curlコマンドを使用して実行する．
 ```
@@ -86,7 +86,7 @@ time curl -b cookie.txt --request POST 'https://{www.shinya-tan.de}/posts' -F "f
 ```
 中括弧の中には取得したドメインを入れる．
 
-## http3を使用した転送方法
+## http3を使用したMECへの転送方法
 ---
 - Google ChromeのQUICを有効化する
 - `https://{取得したドメイン}/posts/new` の画面をGoogle Chromeで開く
@@ -94,7 +94,7 @@ time curl -b cookie.txt --request POST 'https://{www.shinya-tan.de}/posts' -F "f
 - 上記の状態でファイルを転送し，デベロッパーモードでレスポンス時間を計測する.
 
 
-## 分割アップロード
+## MECへの分割アップロード
 
 - 対象のファイルを用意する
 - 下記のコマンドを実行する．この時`xargs.sh`にある変数を適宜変更する.
